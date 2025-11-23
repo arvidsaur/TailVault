@@ -14,7 +14,7 @@ else
   cp /config/ssh_host_* /etc/ssh/
 fi
 
-adduser -D -h /conf "$SFTP_USER"
+adduser -D -h /conf -G users "$SFTP_USER"
 
 echo "$SFTP_USER:$SFTP_PASS" | chpasswd
 
